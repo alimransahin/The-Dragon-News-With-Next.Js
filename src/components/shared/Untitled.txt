@@ -1,0 +1,7 @@
+Project Figma Link: Https://Www.Figma.Com/File/KPUSqGA0slRSDtDdjmP4vh/Dragon-News?Type=Design&Node-Id=406-23&Mode=Design&T=HDSF9UnzWPbxIg8X-0
+
+Server Live API Link: Https://The-News-Portal-Server.Vercel.App
+
+Server Github Code Link: Https://Github.Com/ProgrammingHero1/B8-The-Dragon-News-With-Next.Js-Server
+
+Frontend Github Code Link:Https://Github.Com/ProgrammingHero1/B8-The-Dragon-News-With-Next.JS-Frontend
