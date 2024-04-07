@@ -11,6 +11,7 @@ import { IconButton, Stack } from "@mui/material";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Link from "next/link";
+import Header from "./Header";
 
 const NavItems = [
   {
@@ -23,7 +24,7 @@ const NavItems = [
   },
   {
     route: "Category",
-    path: "/category",
+    path: "/categories/news?category=all-news",
   },
   {
     route: "News",
@@ -39,38 +40,41 @@ const NavItems = [
   },
 ];
 
-function Nabvar() {
+function Navbar() {
   return (
-    <AppBar position="static" className="bg-black">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Image src={logo} height={100} width={100} alt="Logo" />
-          <Box className="w-full text-center">
-            {NavItems.map((item) => (
-              <Link key={item} href={item.path}>
-                <Button className="text-white">{item.route}</Button>
-              </Link>
-            ))}
-          </Box>
-          <Box>
-            <Stack direction="row" sx={{ "& svg": { color: "white" } }}>
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-            </Stack>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <Header />
+      <AppBar position="static" className="bg-black">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Image src={logo} height={100} width={100} alt="Logo" />
+            <Box className="w-full text-center">
+              {NavItems.map((item) => (
+                <Link key={item} href={item.path}>
+                  <Button className="text-white">{item.route}</Button>
+                </Link>
+              ))}
+            </Box>
+            <Box>
+              <Stack direction="row" sx={{ "& svg": { color: "white" } }}>
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+              </Stack>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>{" "}
+    </>
   );
 }
-export default Nabvar;
+export default Navbar;
